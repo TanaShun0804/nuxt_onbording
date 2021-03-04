@@ -2,6 +2,11 @@
   <ul>
     <li v-for="book in books" :key="book.id">
       {{ book.name }}
+      <ul>
+        <li>
+          {{ book.description }}
+        </li>
+      </ul>
     </li>
   </ul>
 </template>
