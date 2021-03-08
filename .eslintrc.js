@@ -5,7 +5,7 @@ module.exports = {
     node: true,
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
   },
   extends: [
     '@nuxtjs',
@@ -17,5 +17,7 @@ module.exports = {
   ],
   plugins: ['prettier'],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'comma-dangle': ['never'],
+  },
 }

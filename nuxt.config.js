@@ -48,4 +48,12 @@ export default {
   build: {},
 
   dev: process.env.NODE_ENV !== 'production',
+
+  typescript: {
+    typeCheck: {
+      eslint: {
+        files: './src/**/*.{ts,js,vue}',
+      },
+    },
+  },
 }
