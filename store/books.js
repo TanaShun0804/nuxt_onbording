@@ -10,8 +10,6 @@ export const mutations = {
 
 export const actions = {
   async getList({ commit }) {
-    // eslint-disable-next-line no-console
-    console.log('get books')
     const res = await this.$axios.$get('/books')
     commit('setList', res)
   },
