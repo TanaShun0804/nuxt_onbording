@@ -1,3 +1,5 @@
+import config from '../nuxt.config'
+import { members } from '../db.json'
 export const state = () => ({
   list: [],
   loading: true,
@@ -14,9 +16,12 @@ export const mutations = {
 
 export const actions = {
   async getList({ commit }) {
-    const sleep = (msec) => new Promise((resolve) => setTimeout(resolve, msec))
-    await sleep(1000)
-    const res = await this.$axios.$get('/members')
+    let res
+    if (config.dev) {
+      res = await this.$axios.$get('/members') // axios学習用
+    } else {
+      res = await members
+    }
     commit('setList', res)
     commit('setLoading', false)
   },

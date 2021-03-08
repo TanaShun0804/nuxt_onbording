@@ -1,4 +1,5 @@
 import config from '../nuxt.config'
+import { books } from '../db.json'
 
 export const state = () => ({
   list: [],
@@ -12,11 +13,13 @@ export const mutations = {
 
 export const actions = {
   async getList({ commit }) {
-    console.log(config)
+    let res
     if (config.dev) {
-      const res = await this.$axios.$get('/books')
-      commit('setList', res)
+      res = await this.$axios.$get('/books') // axios学習用
+    } else {
+      res = await books
     }
+    commit('setList', res)
   },
 }
 
