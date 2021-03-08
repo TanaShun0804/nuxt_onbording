@@ -1,7 +1,145 @@
 {
     "books": [
-      {"id": 1, "name": "アジャイルサムライ", "description":"アジャイル開発を広く学習できます" },
-      {"id": 2, "name": "クリーンアーキテクチャ", "description": "アプリケーション設計を学習できます" },
-      {"id": 3, "name": "リーダブルコード", "description": "読みやすいコードの基本を学習できます" }
+      {
+        "id": 1, 
+        "name": "アジャイルサムライ−達人開発者への道", 
+        "description":"マスターセンセイと学ぶアジャイル開発の道。動くソフトウェアを素早く開発するための「アジャイルソフトウェア開発手法」を、実際に導入するにはどうすればよいかを、豊富な図を使い親しみやすい言葉で解説しています。経験豊かな著者が具体的なノウハウをまとめた本書は、アジャイル開発を導入したいと考えている組織や人のための「現場のマニュアル」として役立ってくれることでしょう。", 
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51flKufOVUL._SX346_BO1,204,203,200_.jpg"
+      },
+      {
+        "id": 2, 
+        "name": "クリーンアーキテクチャ", 
+        "description": "アーキテクチャのルールはどれも同じである!書いているコードが変わらないのだから、どんな種類のシステムでもソフトウェアアーキテクチャのルールは同じ。ソフトウェアアーキテクチャのルールとは、プログラムの構成要素をどのように組み立てるかのルールである。構成要素は普遍的で変わらないのだから、それらを組み立てるルールもまた、普遍的で変わらないのである。(本書「序文」より)",
+        "image": "https://images-fe.ssl-images-amazon.com/images/I/51LkcwTMC8L._SX218_BO1,204,203,200_QL40_ML2_.jpg"
+      },
+      {
+        "id": 3, 
+        "name": "リーダブルコード", 
+        "description": "「美しいコードを見ると感動する。優れたコードは見た瞬間に何をしているかが伝わってくる。そういうコードは使うのが楽しいし、自分のコードもそうあるべきだと思わせてくれる。本書の目的は、君のコードを良くすることだ」(本書「はじめに」より)。",
+        "image": "https://images-fe.ssl-images-amazon.com/images/I/51MgH8Jmr3L._SY291_BO1,204,203,200_QL40_ML2_.jpg"
+      },
+      {
+        "id": 4, 
+        "name": "達人プログラマー ―熟達に向けたあなたの旅― 第2版", 
+        "description": "本書は、より効率的、そしてより生産的なプログラマーになりたいと願うソフトウェア開発者に向けて、アジャイルソフトウェア開発手法の先駆者として知られる二人により執筆されました。経験を積み、生産性を高め、ソフトウェア開発の全体をより良く理解するための、実践的なアプローチが解説されています。先見性と普遍性に富んだ本書は、入門者には手引きとなり、ベテランでも読み直すたびに得るものがある、座右の一冊です。",
+        "image": "https://m.media-amazon.com/images/I/51W3GJV1X-L._SY346_.jpg" 
+      },
+      {
+        "id": 5, 
+        "name": "Webを支える技術", 
+        "description": "Webは誕生から20年で爆発的な普及を果たし,17億人のユーザと2億台のサーバを抱える巨大システムへと成長しました。Webがここまで成功した秘密は,その設計思想,いわゆるアーキテクチャにあります。Webのアーキテクチャ,そしてHTTP,URI,HTMLといったWebを支える技術は,Webがどんなに巨大化しても対応できるように設計されていたのです。",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51OSBZvAxGL._SX351_BO1,204,203,200_.jpg"
+      },
+      {
+        "id": 6, 
+        "name": "Web API: The Good Parts", 
+        "description": "Web APIの設計、開発、運用についての解説書。APIは設計次第で使いづらいものになるだけではなく、公開後の保守運用も難しくなってしまいます。そのためAPIを美しく設計することがとても重要です。",
+        "image": "https://images-fe.ssl-images-amazon.com/images/I/51GHwTNJgSL._SX218_BO1,204,203,200_QL40_ML2_.jpg"
+      },
+      {
+        "id": 7, 
+        "name": "RESTful Webサービス", 
+        "description": "RESTFulなアーキテクチャの概念、 RESTfulなサービスの特徴について述べ、RESTful Webサービスを設計するための基本的なルールであるリソース指向アーキテクチャについて解説します。",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51Su2Ger2sL._SX385_BO1,204,203,200_.jpg"
+      },
+      {
+        "id": 8, 
+        "name": "初めてのGraphQL", 
+        "description": "今日では多くのWebサービスがRESTアーキテクチャスタイルで実装されています。RESTは2000年にフィールディングの論文で提唱された後に爆発的に普及し洗練されてきました。一方で、本書で紹介するGraphQLは2015年にFacebookによって公開されたRESTとは異なるアプローチのアーキテクチャです。",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51Z8dT721zL._SX350_BO1,204,203,200_.jpg"
+      },
+      {
+        "id": 9, 
+        "name": "オブジェクト指向設計実践ガイド", 
+        "description": "オブジェクト指向設計の名著として名高い\"Practical Object-Oriented Design in Ruby\"、待望の翻訳版! 使いこなせるようになるととても便利なオブジェクト指向ですが、「なんとなく」の理解で使っていると、大きな罠にかかってしまいます。本書は、保守性を上げて運用コストを下げるアプリケーションをつくるために、クラス設計から基本概念、継承のテクニック、ダックタイプ、そしてテスト設計まで、幅広くカバーしています。",
+        "image": "https://images-fe.ssl-images-amazon.com/images/I/51-TCt0H4UL._SX218_BO1,204,203,200_QL40_ML2_.jpg"
+      }
+    ],
+    "members": [
+      {
+        "id": 1, 
+        "firstName": "田中",
+        "lastName": "竣",
+        "nickname": "たなしゅん",
+        "description": "3月1日に入社した田中です！新卒でSIerに就職し、小さい会社を転々として、業務システム開発、パッケージシステムのカスタマイズプロジェクト、新規事業MVP受託開発等を経てhacomonoに入社致しました。",
+        "locationDetail": "東京都北区(現在は板橋区在住)",
+        "families": [
+          {
+            "id": 1, 
+            "relation": "自分"
+          },
+          {
+            "id": 2, 
+            "relation": "妻"
+          }
+        ],
+        "dobYear": 1993,
+        "dobMonth": 8,
+        "dobDay": 4,
+        "hobbies": [
+          {
+            "id": 1, 
+            "name": "ロードバイク",
+            "description": "SCULTURA 400"
+          },
+          {
+            "id": 2, 
+            "name": "東京ディズニーリゾートに行くこと",
+            "description": ""
+          },
+          {
+            "id": 3, 
+            "name": "ゲーム",
+            "description": "CALL OF DUTY、マイクラ、キングダムハーツ"
+          },
+          {
+            "id": 4, 
+            "name": "アプリ開発",
+            "description": "FlutterでiOSアプリ制作中です"
+          }
+        ],
+        "skills": [
+          {
+            "id": 1, 
+            "name": "HTML",
+            "yearsOfExperience": "2年"
+          },
+          {
+            "id": 2, 
+            "name": "CSS",
+            "yearsOfExperience": "2年"
+          },
+          {
+            "id": 3, 
+            "name": "Ruby",
+            "yearsOfExperience": "1年半"
+          },
+          {
+            "id": 4, 
+            "name": "Javascript",
+            "yearsOfExperience": "2年半"
+          },
+          {
+            "id": 5, 
+            "name": "React",
+            "yearsOfExperience": "半年"
+          },
+          {
+            "id": 6, 
+            "name": "Typescript",
+            "yearsOfExperience": "半年"
+          },
+          {
+            "id": 7, 
+            "name": "SQL",
+            "yearsOfExperience": "3年"
+          },
+          {
+            "id": 8, 
+            "name": "GraphQL",
+            "yearsOfExperience": "半年"
+          }
+        ]
+      }
     ]
   }
