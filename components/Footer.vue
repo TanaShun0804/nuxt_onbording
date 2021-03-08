@@ -1,9 +1,9 @@
 <template>
   <footer class="footer">
     <div>
-      <span class="copyright"
-        >Copyright © 2021 ShunTANAKA All Rights Reserved.</span
-      >
+      <span class="copyright">
+        Copyright © 2021 ShunTANAKA All Rights Reserved.
+      </span>
     </div>
   </footer>
 </template>
