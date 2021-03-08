@@ -14,10 +14,10 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
     '@nuxtjs/eslint-config-typescript',
+    'eslint-config-prettier',
   ],
   plugins: ['prettier'],
   // add your custom rules here
-  rules: {
-    'comma-dangle': 0,
-  },
+  rules: {},
+  ignorePatterns: ['node_modules/', 'dist/', 'public/'],
 }
