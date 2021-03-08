@@ -67,14 +67,14 @@ import MembersModule, { Member } from '../store/members'
 
 @Component({})
 export default class Index extends Vue {
-  memberModule = getModule(MembersModule, this.$store)
+  membersModule = getModule(MembersModule, this.$store)
 
   get member(): Member {
-    return this.memberModule.member
+    return this.membersModule.member
   }
 
   get isLoading(): boolean {
-    return this.memberModule.loading
+    return this.membersModule.loading
   }
 
   get fullName(): string {
@@ -103,7 +103,7 @@ export default class Index extends Vue {
   }
 
   created() {
-    this.memberModule.getList()
+    this.membersModule.getList()
   }
 }
 </script>
