@@ -12,11 +12,11 @@ export const mutations = {
 
 export const actions = {
   async getList({ commit }) {
+    console.log(config)
     if (config.dev) {
-      console.log(config)
+      const res = await this.$axios.$get('/books')
+      commit('setList', res)
     }
-    const res = await this.$axios.$get('/books')
-    commit('setList', res)
   },
 }
 
