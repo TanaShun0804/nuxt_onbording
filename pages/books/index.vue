@@ -16,22 +16,22 @@
   </div>
 </template>
 
-<script>
-import { mapGetters, mapActions } from 'vuex'
-export default {
-  computed: {
-    ...mapGetters({
-      books: 'books/bookList',
-    }),
-  },
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+import { getModule } from 'vuex-module-decorators'
+import BooksModule, { Book } from '../../store/books'
+
+@Component({})
+export default class Index extends Vue {
+  booksModule = getModule(BooksModule, this.$store)
+
+  get books(): Book[] {
+    return this.booksModule.books
+  }
+
   created() {
-    this.getList()
-  },
-  methods: {
-    ...mapActions({
-      getList: 'books/getList',
-    }),
-  },
+    this.booksModule.getList()
+  }
 }
 </script>
 
