@@ -2,7 +2,7 @@
   <footer class="footer">
     <div>
       <span class="copyright"
-        >Copyright © 2020 Hacomono Library All Rights Reserved.</span
+        >Copyright © 2021 ShunTANAKA All Rights Reserved.</span
       >
     </div>
   </footer>
