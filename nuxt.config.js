@@ -23,10 +23,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    // { src: '~/plugins/client-only.js', mode: 'client' }, // クライアント側でのみ読み込む
-    // { src: '~/plugins/server-only.js', mode: 'server' }, // サーバー側でのみ読み込む
-  ],
+  plugins: ['~/plugins/axios-accessor.ts'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
