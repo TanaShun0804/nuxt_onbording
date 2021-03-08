@@ -1,20 +1,15 @@
-# nuxt-tutorial
+# nuxt 研修
 
-## Build Setup
+## Hacomono Library(ただの自己紹介ページ)
 
-```bash
-# install dependencies
-$ npm install
+ローカルサーバー(http://localhost:3000)
+`npm run dev`
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+API サーバー(http://localhost:9999)
+`json-server --watch db.json -p 9999`
+※json-server のインストールが必要
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+デプロイ先(Netlify)
+https://epic-feynman-3019d9.netlify.app/
 
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+今後時間が確保できれば、本社に置いてある本をレンタルしたり、他の人のおすすめ本とかを見れるサイトにできたら良いな...
