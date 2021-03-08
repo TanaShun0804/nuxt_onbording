@@ -1,3 +1,5 @@
+import config from '../nuxt.config'
+
 export const state = () => ({
   list: [],
 })
@@ -10,6 +12,9 @@ export const mutations = {
 
 export const actions = {
   async getList({ commit }) {
+    if (config.dev) {
+      console.log(config)
+    }
     const res = await this.$axios.$get('/books')
     commit('setList', res)
   },
