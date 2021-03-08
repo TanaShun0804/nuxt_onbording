@@ -18,6 +18,6 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
-    'comma-dangle': ['never'],
+    'comma-dangle': 0,
   },
 }
