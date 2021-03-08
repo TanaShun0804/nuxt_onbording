@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2 class="page-title">ダッシュボードという名の自己紹介ページ</h2>
-    <div v-if="!loading" class="introduce-group">
+    <div v-if="!isLoading" class="introduce-group">
       <div class="introduce-row">
         <div class="introduce-column">名前</div>
         <div class="introduce-content">
@@ -50,9 +50,9 @@
         <div class="introduce-content">
           <p v-for="skill in member.skills" :key="skill.id">
             {{ skill.name }}
-            <span v-if="skill.yearsOfExperience"
-              >({{ skill.yearsOfExperience }})</span
-            >
+            <span v-if="skill.yearsOfExperience">
+              ({{ skill.yearsOfExperience }})
+            </span>
           </p>
         </div>
       </div>
@@ -60,45 +60,51 @@
   </div>
 </template>
 
-<script>
-import { mapGetters, mapActions } from 'vuex'
-export default {
-  computed: {
-    ...mapGetters({
-      member: 'members/memberForDashBoard',
-      loading: 'members/memberLoading',
-    }),
-    fullName() {
-      return this.member.firstName + this.member.lastName
-    },
-    birthOfDate() {
-      return `${this.member.dobYear}年${this.member.dobMonth}月${this.member.dobDay}日`
-    },
-    age() {
-      const birthDate = new Date(
-        this.member.dobYear,
-        this.member.dobMonth - 1,
-        this.member.dobDay
-      )
-      const today = new Date()
-      const thisYearBirthDate = new Date(
-        today.getFullYear(),
-        birthDate.getMonth(),
-        birthDate.getDate()
-      )
-      const diff = today.getFullYear() - birthDate.getFullYear()
-      const age = today < thisYearBirthDate ? diff - 1 : diff
-      return age
-    },
-  },
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+import { getModule } from 'vuex-module-decorators'
+import MembersModule, { Member } from '../store/members'
+
+@Component({})
+export default class Index extends Vue {
+  memberModule = getModule(MembersModule, this.$store)
+
+  get member(): Member {
+    return this.memberModule.member
+  }
+
+  get isLoading(): boolean {
+    return this.memberModule.loading
+  }
+
+  get fullName(): string {
+    return this.member.firstName + this.member.lastName
+  }
+
+  get birthOfDate() {
+    return `${this.member.dobYear}年${this.member.dobMonth}月${this.member.dobDay}日`
+  }
+
+  get age() {
+    const birthDate = new Date(
+      this.member.dobYear,
+      this.member.dobMonth - 1,
+      this.member.dobDay
+    )
+    const today = new Date()
+    const thisYearBirthDate = new Date(
+      today.getFullYear(),
+      birthDate.getMonth(),
+      birthDate.getDate()
+    )
+    const diff = today.getFullYear() - birthDate.getFullYear()
+    const age = today < thisYearBirthDate ? diff - 1 : diff
+    return age
+  }
+
   created() {
-    this.getList()
-  },
-  methods: {
-    ...mapActions({
-      getList: 'members/getList',
-    }),
-  },
+    this.memberModule.getList()
+  }
 }
 </script>
 
