@@ -1,7 +1,7 @@
 <template>
-  <div v-if="!loading" class="container">
-    <!-- <h2>ダッシュボードという名の自己紹介ページ</h2> -->
-    <div class="introduce-group">
+  <div class="container">
+    <h2 class="page-title">ダッシュボードという名の自己紹介ページ</h2>
+    <div v-if="!loading" class="introduce-group">
       <div class="introduce-row">
         <div class="introduce-column">名前</div>
         <div class="introduce-content">
@@ -105,21 +105,28 @@ export default {
 <style lang="scss" scoped>
 .container {
   display: flex;
-  justify-content: center;
-}
-.introduce-group {
-  display: flex;
   flex-direction: column;
-  .introduce-row {
+  align-items: center;
+  .page-title {
+    padding: 2rem 0;
+  }
+  .introduce-group {
     display: flex;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-    .introduce-column {
-      width: 200px;
-    }
-    .introduce-content {
-      max-width: 400px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(161, 161, 161, 0.5);
+    .introduce-row {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin: 10px;
+      .introduce-column {
+        width: 200px;
+      }
+      .introduce-content {
+        max-width: 600px;
+      }
     }
   }
 }
