@@ -1,5 +1,8 @@
 # nuxt 研修
 
+![chrome-capture](https://user-images.githubusercontent.com/79824702/110275532-8f7d8000-8014-11eb-9a6a-d79ffa00cd31.gif)
+
+
 ## Hacomono Library(ただの自己紹介ページ)
 
 ローカルサーバー(http://localhost:3000)
